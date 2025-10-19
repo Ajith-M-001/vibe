@@ -4,6 +4,7 @@ import "./globals.css";
 import { TRPCReactProvider } from "@/trpc/client";
 import { APP_NAME } from "@/lib/constants";
 import { APP_DESCRIPTION } from '../lib/constants';
+import { Toaster } from "@/components/ui/sonner";
 
 // Load Inter font
 const inter = Inter({
@@ -29,6 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
         <TRPCReactProvider>
+          <Toaster/>
           <main>{children}</main>
         </TRPCReactProvider>
       </body>
